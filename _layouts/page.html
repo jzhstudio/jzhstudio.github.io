@@ -1,21 +1,13 @@
 ---
-layout: compress
+layout: default
 ---
+<article class="center-align">
+  <h2 class="my-mini-heading">{{ page.title }}</h2>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-  	{% include head.html %}
-    <body>
-    	{% include svg-icons.html %}
-		<header class="page-header">
-			<h1 class="post-title">{{ page.title }}</h1>
-			{% include menu-search.html %}
-		</header>
-        <main>
-		    {{ content }}
-		</main>
-        {% include footer.html %}
-        {% include scripts.html %}
-		
-    </body>
-</html>
+  <div class="my-text-body">
+    {{ content }}
+  </div>
+  <div class="center-align">
+    <a class="waves-effect waves-teal btn-flat btn-large" href="{{ site.baseurl }}/">{{ site.home_btn }}</a>
+  </div>
+</article>
