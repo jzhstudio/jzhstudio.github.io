@@ -22,7 +22,7 @@ name_badge: "an article by"
 rss_badge: "Subscribe feed!"
 
 # build settings
-markdown: kramdown
+markdown: markdown
 
 # exclude files
 exclude:
