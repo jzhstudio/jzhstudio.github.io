@@ -1,94 +1,103 @@
-# User Settings | Edit there as per required
+# Welcome to Jekyll!
 
-title: accent
-url: "http://ankitsultana.me"
-baseurl: "/accent"
+# Website settings
+title: "Jalpc"
+description: "Jack's blog,use Jekyll and github pages."
+keywords: "Jack,Jalpc,blog,Jekyll,github,gh-pages"
+baseurl: "/"
+url: "http://www.jack003.com"
+# url: "http://127.0.0.1:4000"
 
-# This will show up at the top of index page
-site_heading: >
-    foo <span class="faded">'s blog</span>
+# author
+author:
+  name: 'Jack'
+  first_name: 'Jia'
+  last_name: 'Kun'
+  email: 'me@jack003.com'
+  facebook_username: 'jiakunnj'
+  github_username: 'Jack614'
+  head_img: 'static/img/landing/Jack.jpg'
+  desc: 'I am a Python engineer with website development, automation Ops and writing scripts experience. Life is a continuous learning process, so work makes me more rigorous, travel makes my life more colorful. I can make lots of friends when I coding and travel.'
 
-email: your@email.com
-author: yourname
-# This description will show up in google search results
-# (for index page) etc.
-description: >
-    accent is, as Trump would put it, the best
+# sections
+sections:
+  - id: 'about-me'
+    i18n: 'nav.about_me'
+    name: 'About'
+    tpl: 'about.html'
+    css: ''
 
-# This will what will show against &copy; in the footer
-copyright: accent
-# Toggle your short bio, which will displayed on your index page
-# Just toggle it and run jekyll again to see
-intro: false         # Tip: Remove the span from site_heading if intro is set to true
-# This will be displayed in your intro
-short_bio: >
-    Welcome! This is <span>accent</span>, a mobile friendly theme for Jekyll. The main feature of this
-    theme is that you can change the accent color. Refer the
-    <a class="underline different-highlight" href="http://ankitsultana.me/accent/documentation.html">
-        Documentation
-    </a>
-    to know how.
+  - id: 'career'
+    i18n: 'nav.career'
+    name: 'Career'
+    tpl: 'career.html'
+    css: 'timeline'
 
-permalink: /:title.html
+  - id: 'skills'
+    i18n: 'nav.skills'
+    name: 'Skills'
+    tpl: 'skills.html'
+    css: 'team'
 
-# Comments are powered by disqus
-comments: true
+  - id: 'projects'
+    i18n: 'nav.projects'
+    name: 'Projects'
+    tpl: 'projects.html'
+    css: 'project'
 
-# keep about_stub roughly 12 words long for best results
-# This will show up at the bottom of each post
-# Note that about_footer should be true if you want
-# to see author information at the bottom of each post
-about_stub: >
-    Keep this sentence less than 13 words or it won't look good.
+  - id: 'blog'
+    i18n: 'nav.blog'
+    name: 'Blog'
+    tpl: 'blog.html'
+    css: 'testimonials navy-section'
 
-about_footer: true
+  - id: 'links'
+    i18n: 'nav.link'
+    name: 'Links'
+    tpl: 'links.html'
+    css: 'contact'
 
-twitter_username: AnkitSultana
-github_username: yourgithub
-facebook_id: yourusername
+# localization
+languages:
+  - locale: 'en'
+    flag: 'static/img/flags/United-States.png'
+  - locale: 'zh'
+    flag: 'static/img/flags/China.png'
 
-favicon: true
-favicon_location: "images/favicon.ico"
+# blog img path
+img_path: 'http://www.jack003.com/static/img/blog'
 
-profile_picture: images/temp.png
-paginate: 5
-paginate_path: "/page/:num"
-tracking_id: UA-69243698-7 # GA Tracking ID
+# donate
+donate:
+  wechat: 'static/img/pay/wechat.png'
+  alipay: 'static/img/pay/alipay.png'
 
-# Social Stuff | open graph and twitter cards
-og_image: "images/accent.png" # This will show in facebook thumbnails
-twitter_image: "http://ankitsultana.me/images/accent.png?1234" # This will show in twitter cards
+# comment
+changyan:
+  # appid: cysfY7ULn
+  # conf: prod_861928934cecb7a18e15bedaed9dae29
+disqus:
+  name: jalpc
+  public_key: tj2MPaNlHMONwTH5bGDNSXyaBpW7q282MeUzh5CwcjJerNhK8Kxk3aWo7IckzTX7
 
-####################################
-####################################
-####################################
-### Build Settings | Don't Touch ###
-####################################
-####################################
-####################################
+# share
+bshare:
+  uuid: 513f778e-a8f7-4c20-9ec2-d29cc2328d75
 
+# baidu analytics
+ba:
+  uuid: 317acca9ef9255b934e46371e471431d
+
+# google analytics
+ga:
+  id: UA-73784599-1
+
+# Build settings
+encoding: "utf-8"
+
+# other settings
+highlighter: rouge
 markdown: kramdown
-
-gems:
-    - jekyll-paginate
-
-sass:
-    style: compressed
-    sass_dir: _sass
-
-# Scopes
-defaults:
-    -
-        scope:
-            path:   ""
-            type:   "pages"
-        values:
-            layout: "page"
-    -
-        scope:
-            path:   ""
-            type:   "posts"
-        values:
-            layout: "post"
-
-exclude: [vendor] # For travis ci
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
